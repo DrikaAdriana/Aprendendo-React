@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"> 
+  
+  </div>
+  <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script> <!--2 pacotes importados do cdm links (//unpkg) -->
+  <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script> <!--daí conseguimos acessar React E ReactDOM-->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script><!--unpkg do babel-->
+  <script type="text/babel">//babel
+    var divRoot = document.getElementById("root");  
+
+
+    const Welcome = (props) => <h1>{props.nome}</h1> 
+
+    const App = () => {
+      return (
+        <div> 
+         <Welcome nome="Adriana" />
+         <Welcome nome="Vini" />
+         <Welcome nome="Victor" />
+        </div>  
+      )
+    }
+
+    ReactDOM.render(<App />, divRoot);
+   
+  </script>
+</body> 
+  

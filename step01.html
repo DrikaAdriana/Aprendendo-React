@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"> 
+  
+  </div>
+  <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script> <!--2 pacotes importados do cdm links (//unpkg) -->
+  <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script> <!--daí conseguimos acessar React E ReactDOM-->
+  <script type="text/javascript">
+    //var newElement = document.createElement("h1"); //Criei novo elemento
+    //newElement.innerText = "Olá Mundo JavaScript"; //Coloquei texto dentro elemento
+    var newElement = React.createElement("h1", {children: 'Olá Mundo JavaScript + React'})// primeiro passo o elemento, depois o filho 
+    var rootElement = document.getElementById("root"); //Peguei a div por id
+    ReactDOM.render(newElement, rootElement);// método render tem 2 parâmetros(qual elemento e onde )quero renderizar(ReactDOM biblioteca )
+
+    // rootElement.appendChild(newElement); //Joguei novo elemento dentro da div
+
+
+
+
+
+
+  </script>
+</body>
+</html>
